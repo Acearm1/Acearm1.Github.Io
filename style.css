@@ -1,0 +1,299 @@
+
+/*Generic styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/*Header section styles*/
+header {
+    background-color: #fff; 
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    overflow: hidden; 
+    position: fixed; 
+    width: 100%;
+    z-index: 100; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    vertical-align: middle;
+}
+
+nav {
+    float: right; 
+    margin-top: 20px; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 750;
+    transition: color 0.2s ease;
+    font-size: larger;
+}
+
+nav a:hover {
+    color: green; /* Blue hover color */
+}
+
+
+/*Hero section styles*/
+.hero {
+    /* Use background-image, not background */
+    background-image: url("Img/Allied_BG1.jpg"); /* Default image */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text color should contrast with the background */
+    padding: 200px 0;
+    text-align: center;
+    position: relative; /* For overlay */
+}
+
+.hero::before { /* Semi-transparent overlay */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Bring content above overlay */
+    z-index: 1; /* Ensure content is on top */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff; /* Example blue color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+
+/*Why innovate section styles*/
+.why-innovate {
+    padding: 80px 0;
+    display: flex;
+    align-items: flex-start; /* Vertically center content */
+    flex-wrap: nowrap; /* Allow wrapping on smaller screens */
+}
+
+.why-innovate-image {
+    width: 40%; /* Adjust width as needed */
+    padding-left: 80px;
+    padding-right: 40px;
+    flex-shrink: 0;
+}
+
+.why-innovate-image img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevents a small space below the image */
+}
+
+.why-innovate-content {
+    width: 60%; /* Adjust width as needed */
+    padding: 20px;
+    flex-grow: 1;
+    padding-right: 80px;
+}
+
+.why-innovate h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .why-innovate {
+        flex-wrap: wrap; /* Allow warpping on smaller screens*/
+        align-items: center; /* center the items vertivccally*/
+    }
+}
+
+
+/*Benefits section styles*/
+.benefits-section {
+    padding: 60px;
+    background-color: black;
+    text-align: center;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.benefit-box {
+    width: 400px; /* Increased width */
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border-color: #333;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit-image {
+    width: 200px; /* Or your preferred size */
+    height: 200px; /* Or your preferred size */
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 50%; /* Optional: for circular images */
+}
+
+.benefit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or contain, or fill, as needed */
+    display: block; /* Key for preventing extra space below image */
+}
+
+
+.benefit-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #eee;
+    font-size: 1.5em;
+}
+
+.benefit-description {
+    text-align: left;
+    color: #eee;
+}
+
+.benefits-section h2 {
+    font-size: 2.5em;
+    padding-bottom: 2%;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .benefit-box {
+        width: 90%; /* Keep responsive width adjustment */
+        margin: 10px auto;
+    }
+}
+
+/*About section styles*/
+.about-section {
+    padding: 60px;
+    background-color: Black;
+    text-align: center; 
+}
+
+.about-section h2 {
+    font-size: 2em;
+    color: white;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+.about-section p {
+    padding-right: 80px;
+    padding-left: 80px;
+    color: white;
+}
+
+/*Service-section styles*/
+.service-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    padding-top: 5%;
+    gap: 30px; 
+}
+
+.service {
+    text-align: center;
+    padding: 30px; 
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(5, 5, 5, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: rgba(1, 1, 1, 0.7);
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+	background-color: #111;
+}
+
+.service img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.service-section h2 {
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+}
