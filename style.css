@@ -65,6 +65,15 @@ nav a:hover {
     color: green; /* Blue hover color */
 }
 
+/*Under construction header*/
+.construction {
+    background-size: cover;
+    background-position: center;
+    color: black; /* Text color should contrast with the background */
+    padding: 200px 0;
+    text-align: center;
+    position: relative; /* For overlay */
+}
 
 /*Hero section styles*/
 .hero {
@@ -301,43 +310,82 @@ nav a:hover {
 /*Contact section styles*/
 .contact-section {
     padding: 80px;
-    background-color: white;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0); /* Example background */
     text-align: center;
 }
 
+.contact-section h2 {
+    font-size: 2.5em; /* Increased font size */
+    text-decoration: none; /* Removed underline */
+    margin-bottom: 20px;
+    color: #333; /* Darker text */
+}
+
 .contact-container {
-    background-color: rgba(0,0,0,0.4);
-    margin-top: 10px;
-    margin-left: 180px;
-    margin-right: 180px;
+    background-color: white; /* Solid background */
+    margin: 20px auto; /* Centered with margin */
+    max-width: 600px; /* Limit width for readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 30px;
+}
+
+.contact-form h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .message-field {
-    width: 500px;
-    height: 100px;
-    max-width: 1000px;
-    max-height: 200px;
-}
-
-.contact-form {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 150px;
+    resize: vertical; /* Allow vertical resizing */
 }
 
 .btn-contact {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #007bff; /* Example blue color */
+    background-color: #007bff;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1.1em;
     transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
-.contact-section h2 {
-    font-size: 2em;
-    text-decoration: underline;
+.btn-contact:hover {
+    background-color: #0056b3;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 20px 10px;
+    }
+}
