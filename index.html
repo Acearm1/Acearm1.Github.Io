@@ -3,29 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AceArm Website</title>
+    <title>Allied Computer Engineering</title>
     <link rel="StyleSheet" type="text/css" href="style.css">
 
     <!--EmailJS script-->
 
-    <script type="text/javascript" src="function.js"></script>
-
-    <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function(){
-        emailjs.init({
-            publicKey: "VXZjsq0I2qdtx3Y7c",
-        });
-    })();
-    </script>
+    <script defer src="index.js"></script>
 
 </head>
-
-
-
-
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFB2BPFGZZ"></script>
@@ -176,24 +161,25 @@
     <section class="contact-section" id="contact">
         <h2>Ready to Transform Your Project? Get a Quote Today</h2>
         <div class="contact-container">
-            <form class="contact-form">
+            <form class="contactForm" id="contactForm">
                 <h3>Let's Get Started</h3>
                 <label for="fname">Name:</label><br>
-                <input maxlength="30" class="name-field" type="text" id="fname" name="fname" required><br><br>
+                <input maxlength="30" class="nameField" type="text" id="name" name="name" required><br><br>
     
                 <label for="cname">Company Name:</label><br>
-                <input maxlength="50" class="company-field" type="text" id="cname" name="cname"><br><br>
+                <input maxlength="50" class="cnameField" type="text" id="cname" name="cname"><br><br>
     
                 <label for="email">Email:</label><br>
-                <input maxlength="100" class="email-field" type="email" id="email" name="email" required><br><br>
+                <input maxlength="100" class="emailField" type="email" id="email" name="email" required><br><br>
     
                 <label for="phone">Phone Number:</label><br>
-                <input maxlength="20" class="phone-field" type="tel" id="phone" name="phone"><br><br>
+                <input maxlength="20" class="phoneField" type="tel" id="phone" name="phone"><br><br>
     
                 <label for="msg">Tell us about your project:</label><br>
-                <textarea maxlength="1000" class="message-field" name="msg" id="msg" required></textarea><br><br>
+                <textarea maxlength="1000" class="messageField" name="message" id="message" required></textarea><br><br>
     
-                <button class="btn-contact" type="button" onclick="sendEmail()">Request Your Quote</button>
+                <button class="btn-contact" type="submit"()>Request Your Quote</button>
+                <div id="responseMessage" style="margin-top: 10px;"></div>
             </form>
         </div>
     </section>

@@ -357,21 +357,21 @@ nav a:hover {
     padding: 30px;
 }
 
-.contact-form h3 {
+.contactForm h3 {
     font-size: 1.8em;
     margin-bottom: 20px;
     color: #333;
 }
 
-.contact-form label {
+.contactForm label {
     display: block;
     margin-bottom: 5px;
     text-align: left;
     color: #555;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contactForm input,
+.contactForm textarea {
     width: calc(100% - 22px); /* Account for padding and border */
     padding: 10px;
     margin-bottom: 15px;
@@ -381,14 +381,14 @@ nav a:hover {
     box-sizing: border-box; /* Include padding and border in width */
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+.contactForm input:focus,
+.contactForm textarea:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.message-field {
+.messageField {
     height: 150px;
     resize: vertical; /* Allow vertical resizing */
 }
